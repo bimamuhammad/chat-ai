@@ -1,0 +1,75 @@
+.App {
+  text-align: left;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Basic styling for the chat window */
+.chat-window {
+  width: 400px;
+  height: 500px;
+  border: 1px solid #ccc;
+  padding: 10px;
+  overflow-y: scroll; /* Enable scrolling for chat history */
+}
+
+.chat-message {
+  margin-bottom: 5px;
+  margin-top: 5px;
+  padding: 5px 5px;
+  border-radius: 5px;
+}
+
+.chat-message.incoming {
+  background-color: #f0f0f0;
+  float: left;
+}
+
+.chat-message.li {
+  padding: 10px 0;
+}
+
+.chat-message.outgoing {
+  background-color: #d0d0d0;
+  float: right; /* Align outgoing messages to the right */
+}
+
+.chat-input {
+  width: 350px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  margin-top: 10px;
+}
