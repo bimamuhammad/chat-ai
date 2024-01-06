@@ -28,7 +28,6 @@ async function sendMessage(){
   chatWindow.appendChild(outgoingMessageLi);
 
   try{
-    debugger
   const result  = await model.generateContent(message);
   console.log(result)
   
