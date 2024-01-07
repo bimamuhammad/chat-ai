@@ -1,5 +1,10 @@
 .App {
   text-align: left;
+  margin: 20px;
+  width: 420px;
+  border: 2px solid rgb(0, 255, 221);
+  border-radius: 10px;
+  height: 610px;
 }
 
 .App-logo {
@@ -71,5 +76,10 @@
   width: 350px;
   padding: 10px;
   border: 1px solid #ccc;
-  margin-top: 10px;
+  /* margin-top: 10px; */
+}
+
+#chat-form {
+  display: flex;
+  flex-direction: row;
 }
