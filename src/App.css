@@ -44,7 +44,8 @@
 
 /* Basic styling for the chat window */
 .chat-window {
-  width: 400px;
+  margin-left: 10px;
+  width: 380px;
   height: 500px;
   border: 1px solid #ccc;
   padding: 10px;
@@ -80,6 +81,7 @@
 }
 
 #chat-form {
+  margin: 0 10px 0 10px;
   display: flex;
   flex-direction: row;
 }
