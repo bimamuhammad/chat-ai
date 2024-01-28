@@ -60,7 +60,7 @@
 }
 
 .chat-message.incoming {
-  background-color: #f0f0f0;
+  background-color: #c76b6b;
   float: left;
 }
 
@@ -71,7 +71,7 @@
 }
 
 .chat-message.outgoing {
-  background-color: #d0d0d0;
+  background-color: #7bb6cf;
   float: right; /* Align outgoing messages to the right */
 }
 

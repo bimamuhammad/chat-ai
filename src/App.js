@@ -1,13 +1,14 @@
 // import logo from './logo.svg';
 import './App.css';
 import { GoogleGenerativeAI } from 'https://esm.run/@google/generative-ai';
+import { marked } from 'marked';
 
 const genAI = new GoogleGenerativeAI(process.env.REACT_APP_GEMINI_API)
 
 
 let message = "";
 function handleTextInput(evt){
-  message = evt.target.value
+  // do nothing
 }
 
 async function sendMessage(){
@@ -15,6 +16,8 @@ async function sendMessage(){
 
   const chatWindow = document.querySelector('.chat-window');
   const chatInput = document.querySelector('.chat-input');
+  message = chatInput.value
+  chatInput.value = ""
 
   const outgoingMessageLi = document.createElement('li');
   outgoingMessageLi.classList.add('chat-message', 'li');
@@ -32,14 +35,11 @@ async function sendMessage(){
   console.log(result)
   
   const response = await result.response
-  
-  responseAI(response.candidates[0].content.parts[0].text)
+  responseAI(response.text())
   } catch (e){
     console.log('An error occured')
   } finally {
     message = ""
-    chatInput.value = ""
-
     // Scroll to the bottom of the chat window
     chatWindow.scrollTop = chatWindow.scrollHeight;
   }
@@ -54,7 +54,8 @@ function responseAI(message){
   // Create a message element
   const incomingmessageElement = document.createElement('div');
   incomingmessageElement.classList.add('chat-message', 'incoming');
-  incomingmessageElement.textContent = message;
+  const markedUpText = marked.parse(message)
+  incomingmessageElement.innerHTML = markedUpText
 
   incomingMessageLi.appendChild(incomingmessageElement)
 

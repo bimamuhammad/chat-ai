@@ -1,6 +1,7 @@
 # chat-ai
 
 ![Alt text](./usage.png?raw=true "Title")
+![Alt text](./usage_2.png?raw=true "Title")
 
 # Getting Started with Create React App
 
