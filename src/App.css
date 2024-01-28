@@ -2,7 +2,7 @@
   text-align: left;
   margin: 20px;
   width: 420px;
-  border: 2px solid rgb(0, 255, 221);
+  border: 8px ridge #6d2f2f;
   border-radius: 10px;
   height: 610px;
 }
@@ -44,11 +44,11 @@
 
 /* Basic styling for the chat window */
 .chat-window {
-  margin-left: 10px;
-  width: 380px;
+  margin: 10px 10px 10px 10px;
+  width: 350px;
   height: 500px;
-  border: 1px solid #ccc;
-  padding: 10px;
+  border: 5px solid #521f7c;
+  list-style: none;
   overflow-y: scroll; /* Enable scrolling for chat history */
 }
 
@@ -66,6 +66,8 @@
 
 .chat-message.li {
   padding: 10px 0;
+  margin-left: -35px;
+  margin-right: 5px;
 }
 
 .chat-message.outgoing {
@@ -74,10 +76,10 @@
 }
 
 .chat-input {
-  width: 350px;
+  width: 325px;
   padding: 10px;
   border: 1px solid #ccc;
-  /* margin-top: 10px; */
+  margin-right: 10px;
 }
 
 #chat-form {
