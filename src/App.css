@@ -52,6 +52,14 @@
   overflow-y: scroll; /* Enable scrolling for chat history */
 }
 
+.chat-heading{
+  text-align: center;
+  background: #2F54D0;
+  margin: 5px 10px 0 10px;
+  font-weight: bolder;
+  color: white;
+}
+
 .chat-message {
   margin-bottom: 5px;
   margin-top: 5px;
@@ -65,9 +73,11 @@
 }
 
 .chat-message.li {
-  padding: 10px 0;
+  /* padding: 10px 0; */
   margin-left: -35px;
   margin-right: 5px;
+  height: 37px;
+  border-radius: 10px;
 }
 
 .chat-message.outgoing {

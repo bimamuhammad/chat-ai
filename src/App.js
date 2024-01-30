@@ -36,14 +36,13 @@ async function sendMessage(){
   
   const response = await result.response
   responseAI(response.text())
+  // Scroll to the bottom of the chat window
+  chatWindow.scrollTop = chatWindow.scrollHeight;
   } catch (e){
     console.log('An error occured')
   } finally {
     message = ""
-    // Scroll to the bottom of the chat window
-    chatWindow.scrollTop = chatWindow.scrollHeight;
   }
-
 }
 
 function responseAI(message){
@@ -67,8 +66,7 @@ function responseAI(message){
 function App() {
   return (
     <div className="App">
-      {/* <div class="chat-window">
-        </div> */}
+      <div class="chat-heading">Chat AI</div>
 
       <ul className='chat-window'></ul>
 
