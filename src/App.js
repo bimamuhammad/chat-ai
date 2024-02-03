@@ -11,6 +11,12 @@ function handleTextInput(evt){
   // do nothing
 }
 
+function keyPressed(evnt){
+  if(evnt.key){
+    debugger
+  }
+}
+
 async function sendMessage(){
   const model = genAI.getGenerativeModel({model: 'gemini-pro'})
 
@@ -39,7 +45,8 @@ async function sendMessage(){
   // Scroll to the bottom of the chat window
   chatWindow.scrollTop = chatWindow.scrollHeight;
   } catch (e){
-    console.log('An error occured')
+    responseAI("Something went wrong. Consulting......")
+    console.error(e)
   } finally {
     message = ""
   }
@@ -72,7 +79,7 @@ function App() {
 
       <div id="chat-form">
         <textarea id="chat-input" class="chat-input"  placeholder="Enter your message..." onChange={handleTextInput}> </textarea>
-        <button type="submit" onClick={sendMessage}>Send</button>
+        <button type="submit" onClick={sendMessage} onKeyDown={keyPressed} id="submit-btn">Send</button>
       </div>
     </div>
   );

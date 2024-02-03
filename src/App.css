@@ -1,10 +1,11 @@
 .App {
   text-align: left;
-  margin: 20px;
-  width: 420px;
-  border: 8px ridge #6d2f2f;
+  /* margin: 20px; */
+  width: calc(100% - 16px);
+  border: 8px ridge #F5ECFD;
   border-radius: 10px;
-  height: 610px;
+  height: 615px;
+  background: #F5ECFD;
 }
 
 .App-logo {
@@ -19,7 +20,7 @@
 }
 
 .App-header {
-  background-color: #282c34;
+  background-color: #b66bf0;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -45,18 +46,20 @@
 /* Basic styling for the chat window */
 .chat-window {
   margin: 10px 10px 10px 10px;
-  width: 350px;
+  font: 13px system-ui;
+  /* width: 350px; */
   height: 500px;
-  border: 5px solid #521f7c;
+  /* border: 5px solid #521f7c; */
   list-style: none;
   overflow-y: scroll; /* Enable scrolling for chat history */
 }
 
 .chat-heading{
   text-align: center;
-  background: #2F54D0;
-  margin: 5px 10px 0 10px;
-  font-weight: bolder;
+  background: #b66bf0;
+  /* margin: 5px 10px 0 10px; */
+  font: 2rem "Fira sans", sans-serif;
+  /* font-weight: bolder; */
   color: white;
 }
 
@@ -68,7 +71,7 @@
 }
 
 .chat-message.incoming {
-  background-color: #c76b6b;
+  background-color: #F4FDEC;
   float: left;
 }
 
@@ -81,7 +84,7 @@
 }
 
 .chat-message.outgoing {
-  background-color: #7bb6cf;
+  background-color: #D9F8BE;
   float: right; /* Align outgoing messages to the right */
 }
 
@@ -93,7 +96,13 @@
 }
 
 #chat-form {
-  margin: 0 10px 0 10px;
+  margin: 10px 10px 10px 10px;
   display: flex;
   flex-direction: row;
+}
+
+#submit-btn {
+  background-image: radial-gradient(#F5ECFD, #b66bf0);
+  border-radius: 16px;
+  border-width: 2px;
 }
