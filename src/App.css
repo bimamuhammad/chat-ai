@@ -73,6 +73,9 @@
 .chat-message.incoming {
   background-color: #F4FDEC;
   float: left;
+  code {
+    text-wrap: balance;
+  }
 }
 
 .chat-message.li {

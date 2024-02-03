@@ -12,8 +12,8 @@ function handleTextInput(evt){
 }
 
 function keyPressed(evnt){
-  if(evnt.key){
-    debugger
+  if(evnt.key.toLowerCase() === 'enter'){
+    sendMessage()
   }
 }
 
@@ -23,6 +23,7 @@ async function sendMessage(){
   const chatWindow = document.querySelector('.chat-window');
   const chatInput = document.querySelector('.chat-input');
   message = chatInput.value
+  document.activeElement.blur()
   chatInput.value = ""
 
   const outgoingMessageLi = document.createElement('li');
@@ -78,8 +79,8 @@ function App() {
       <ul className='chat-window'></ul>
 
       <div id="chat-form">
-        <textarea id="chat-input" class="chat-input"  placeholder="Enter your message..." onChange={handleTextInput}> </textarea>
-        <button type="submit" onClick={sendMessage} onKeyDown={keyPressed} id="submit-btn">Send</button>
+        <textarea id="chat-input" class="chat-input"  placeholder="Enter your message..." onChange={handleTextInput} onKeyDown={keyPressed} > </textarea>
+        <button type="submit" onClick={sendMessage} id="submit-btn">Send</button>
       </div>
     </div>
   );

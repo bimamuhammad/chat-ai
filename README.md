@@ -2,8 +2,6 @@
 
 An demo app that uses the Google's Gemini API to enable a chat between the app user and the app.
 ![Alt text](./new_interface.png?raw=true)
-![Alt text](./usage_2.png?raw=true "Title")
-[<img src="./usage_2.png" width="100" height="100"/>](image.png)
 
 # Getting Started with Create React App
 
